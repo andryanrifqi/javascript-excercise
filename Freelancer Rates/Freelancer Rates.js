@@ -10,3 +10,13 @@ export function dayRate(ratePerHour) {
   return workHoursPerDay*ratePerHour;
 }
 
+/**
+ * Calculates the number of days in a budget, rounded down
+ *
+ * @param {number} budget: the total budget
+ * @param {number} ratePerHour: the rate per hour
+ * @returns {number} the number of days
+ */
+export function daysInBudget(budget, ratePerHour) {
+    return Math.floor(budget/dayRate(ratePerHour));
+  }
